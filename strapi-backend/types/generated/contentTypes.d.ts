@@ -536,6 +536,9 @@ export interface ApiFilmFilm extends Struct.CollectionTypeSchema {
       'images' | 'files' | 'videos' | 'audios',
       true
     >;
+    webHookStatus: Schema.Attribute.Enumeration<
+      ['ready', 'processing', 'failed']
+    >;
   };
 }
 

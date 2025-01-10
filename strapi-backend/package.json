@@ -6,7 +6,7 @@
   "scripts": {
     "build": "strapi build",
     "deploy": "strapi deploy",
-    "develop": "strapi develop",
+    "develop": "strapi dev",
     "seed:example": "node ./scripts/seed.js",
     "start": "strapi start",
     "strapi": "strapi"
@@ -14,13 +14,19 @@
   "dependencies": {
     "@strapi/plugin-cloud": "5.7.0",
     "@strapi/plugin-users-permissions": "5.7.0",
+    "@strapi/provider-upload-aws-s3": "^5.7.0",
     "@strapi/strapi": "5.7.0",
+    "aws-sdk": "^2.1692.0",
+    "axios": "^1.7.9",
     "better-sqlite3": "11.3.0",
+    "dotenv": "^16.4.7",
+    "ffmpeg": "^0.0.4",
     "fs-extra": "^10.0.0",
     "mime-types": "^2.1.27",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-router-dom": "^6.0.0",
+    "strapi-plugin-video-thumbnail": "^0.1.2",
     "styled-components": "^6.0.0"
   },
   "devDependencies": {

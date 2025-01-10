@@ -4,4 +4,11 @@
 
 import { factories } from '@strapi/strapi'
 
-export default factories.createCoreController('api::film.film');
+
+
+const { createCoreController } = require('@strapi/strapi').factories;
+
+module.exports = createCoreController('api::film.film');
+
+
+

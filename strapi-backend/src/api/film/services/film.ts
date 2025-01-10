@@ -4,4 +4,8 @@
 
 import { factories } from '@strapi/strapi';
 
-export default factories.createCoreService('api::film.film');
+'use strict';
+
+const { createCoreService } = require('@strapi/strapi').factories;
+
+module.exports = createCoreService('api::film.film');

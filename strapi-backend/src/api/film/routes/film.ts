@@ -4,4 +4,8 @@
 
 import { factories } from '@strapi/strapi';
 
-export default factories.createCoreRouter('api::film.film');
+
+
+const { createCoreRouter } = require('@strapi/strapi').factories;
+
+module.exports = createCoreRouter('api::film.film');

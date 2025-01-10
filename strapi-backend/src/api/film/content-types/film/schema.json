@@ -46,6 +46,14 @@
     "slug": {
       "type": "uid",
       "targetField": "title"
+    },
+    "webHookStatus": {
+      "type": "enumeration",
+      "enum": [
+        "ready",
+        "processing",
+        "failed"
+      ]
     }
   }
 }
