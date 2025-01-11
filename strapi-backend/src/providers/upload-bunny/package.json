@@ -1,0 +1,9 @@
+{
+  "name": "upload-bunny",
+  "version": "1.0.0",
+  "description": "Bunny.net provider for Strapi upload",
+  "main": "./index.ts",
+  "dependencies": {
+    "axios": "^1.6.2"
+  }
+}

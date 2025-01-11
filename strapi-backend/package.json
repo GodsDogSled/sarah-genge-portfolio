@@ -27,7 +27,9 @@
     "react-dom": "^18.0.0",
     "react-router-dom": "^6.0.0",
     "strapi-plugin-video-thumbnail": "^0.1.2",
-    "styled-components": "^6.0.0"
+    "strapi-provider-upload-bunny": "file:providers/upload-bunny",
+    "styled-components": "^6.0.0",
+    "upload-bunny": "file:src/providers/upload-bunny"
   },
   "devDependencies": {
     "@types/node": "^20",
@@ -41,5 +43,9 @@
   },
   "strapi": {
     "uuid": "bb5f5298-bc99-4c3f-9788-1692d4cc85c4"
-  }
+  },
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }
