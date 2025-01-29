@@ -1,16 +1,24 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import FilmsPage from './features/films/FilmsPage'
+import FilmPage from './components/FilmPage'
+import SingleFilmPage from './components/SingleFilmPage'
+import Login from './components/Login'
+
+import { Route, Routes, Navigate } from 'react-router-dom'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+
 
   return (
-    <>
-      <FilmsPage />
-    </>
+    <Routes>
+      <Route path="/">
+        <Route index element={<FilmPage />} />
+        <Route path="/film">
+          <Route path=':filmId' element={<SingleFilmPage />} />
+        </Route>
+        <Route path="login" element={<Login />} />
+      </Route>
+    </Routes>
   )
 }
 
