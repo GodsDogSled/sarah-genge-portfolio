@@ -1,8 +1,7 @@
 import { useState, useEffect } from 'react';
-import { Auth } from '@supabase/auth-ui-react';
-import { ThemeSupa } from '@supabase/auth-ui-shared';
-import supabase from '../../supabase-client';
+
 import { useGetAllVideoUrlsQuery } from '../features/films/filmVideoSilce';
+import Header from './Header';
 
 const FilmPage = () => {
   const { data, isLoading, error } = useGetAllVideoUrlsQuery('your-storage-zone');
@@ -11,19 +10,22 @@ const FilmPage = () => {
   if (error) return <div>Error loading files</div>;
 
   return (
-    <div>
+    <>
+      <Header />
       {data.map(film => {
         return (
           <div key={film.id}>
             <video
               controls
               className="w-full h-auto rounded-lg shadow-md"
-              src={film.url}>
+              src={film.url}
+              title={film.title}
+            >
             </video>
           </div>
         )
       })}
-    </div>
+    </>
   );
 }
 
