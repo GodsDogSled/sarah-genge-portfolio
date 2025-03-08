@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import FilmPage from './components/FilmPage'
 import SingleFilmPage from './components/SingleFilmPage'
 import Login from './components/Login'
@@ -7,6 +7,7 @@ import { Route, Routes, Navigate } from 'react-router-dom'
 import './App.css'
 
 function App() {
+
 
 
   return (

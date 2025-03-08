@@ -1,7 +1,7 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
 
-export const apiSlice = createApi({
-  reducerPath: 'api',
+export const supabaseApiSlice = createApi({
+  reducerPath: 'supabaseApi',
   baseQuery: fetchBaseQuery({
     baseUrl: import.meta.env.VITE_SUPABASE_URL,
     prepareHeaders: (headers) => {
@@ -11,6 +11,7 @@ export const apiSlice = createApi({
       return headers
     },
   }),
-  tagTypes: ['Post'],
+  tagTypes: ['FilmTextDetails'],
   endpoints: builder => ({})
 })
+
